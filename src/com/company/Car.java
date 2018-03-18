@@ -4,16 +4,6 @@ import java.util.Objects;
 
 public class Car {
 
-    public Car(int id, String brand, String model, int releaseYear, String color, double price, String registrationNumber) {
-        this.id = id;
-        this.brand = brand;
-        this.model = model;
-        this.releaseYear = releaseYear;
-        this.color = color;
-        this.price = price;
-        this.registrationNumber = registrationNumber;
-    }
-
     private int id;
 
     private String brand;
@@ -27,6 +17,16 @@ public class Car {
     private double price;
 
     private String registrationNumber;
+
+    public Car(int id, String brand, String model, int releaseYear, String color, double price, String registrationNumber) {
+        this.id = id;
+        this.brand = brand;
+        this.model = model;
+        this.releaseYear = releaseYear;
+        this.color = color;
+        this.price = price;
+        this.registrationNumber = registrationNumber;
+    }
 
     public int getId() {
         return id;
@@ -85,19 +85,6 @@ public class Car {
     }
 
     @Override
-    public String toString() {
-        return "\nCar{" +
-                "id=" + id +
-                ", brand='" + brand + '\'' +
-                ", model='" + model + '\'' +
-                ", releaseYear=" + releaseYear +
-                ", color='" + color + '\'' +
-                ", price=" + price +
-                ", registrationNumber='" + registrationNumber + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -115,5 +102,19 @@ public class Car {
     public int hashCode() {
 
         return Objects.hash(id, brand, model, releaseYear, color, price, registrationNumber);
+    }
+
+
+    @Override
+    public String toString() {
+        return "\nCar{" +
+                "id=" + id +
+                ", brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", color='" + color + '\'' +
+                ", price=" + price +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                '}';
     }
 }
